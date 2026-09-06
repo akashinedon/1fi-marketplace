@@ -97,7 +97,7 @@ Returns a summary of every product (used by the listing page).
       "name": "Apple iPhone 17 Pro",
       "brand": "Apple",
       "category": "smartphones",
-      "thumbnail": "https://placehold.co/600x600/e8e8ed/1d1d1f?text=iPhone+17+Pro",
+      "thumbnail": "/products/iphone-17-pro-deep-blue.jpg",
       "startingPrice": 134900,
       "startingMrp": 139900
     }
@@ -118,18 +118,18 @@ Returns full product detail: every variant, each with its own EMI plans.
     "brand": "Apple",
     "category": "smartphones",
     "description": "The latest Apple flagship with a titanium frame, A19 Pro chip, and a pro-grade camera system.",
-    "thumbnail": "https://placehold.co/600x600/e8e8ed/1d1d1f?text=iPhone+17+Pro",
+    "thumbnail": "/products/iphone-17-pro-deep-blue.jpg",
     "startingPrice": 134900,
     "startingMrp": 139900,
     "variants": [
       {
         "id": 1,
-        "label": "256GB · Silver",
+        "label": "256GB · Deep Blue",
         "storage": "256GB",
-        "color": "Silver",
+        "color": "Deep Blue",
         "mrp": 139900,
         "price": 134900,
-        "imageUrl": "https://placehold.co/600x600/e8e8ed/1d1d1f?text=iPhone+17+Pro",
+        "imageUrl": "/products/iphone-17-pro-deep-blue.jpg",
         "isDefault": true,
         "emiPlans": [
           {
@@ -183,5 +183,21 @@ Ultra, and OnePlus 13, each with 2 variants and 5 EMI plans per variant.
 
 - The "Proceed with selected plan" CTA is a mock confirmation only (no payment/order is
   persisted) — validates a plan is selected and shows a confirmation message client-side.
-- Product images are placeholders (`placehold.co`) generated per variant; swap
-  `imageUrl` values in `scripts/seed.ts` for real product photography if needed.
+- Product images are real photos of each phone (Apple iPhone 17 Pro, Samsung Galaxy S24
+  Ultra, OnePlus 13), sourced from Wikimedia Commons under free licenses (CC-BY-SA /
+  CC0) and served locally from `public/products/`. Swap `imageUrl` values in
+  `scripts/seed.ts` to point elsewhere if needed.
+
+## Image credits
+
+Product photos in `public/products/` are from [Wikimedia Commons](https://commons.wikimedia.org),
+used under their respective free licenses (CC-BY-SA 4.0 or CC0) — see each file's Commons page
+for the specific license and photographer credit:
+
+| File | Source |
+|------|--------|
+| `iphone-17-pro-deep-blue.jpg` | [File:IPhone 17 Pro (cropped).jpg](https://commons.wikimedia.org/wiki/File:IPhone_17_Pro_(cropped).jpg) |
+| `iphone-17-pro-cosmic-orange.jpg` | [File:IPhone 17 Pro backside (Cosmic Orange) (Oct 1, 2025).jpg](https://commons.wikimedia.org/wiki/File:IPhone_17_Pro_backside_(Cosmic_Orange)_(Oct_1,_2025).jpg) |
+| `galaxy-s24-ultra-titanium-gray.jpg` | [File:Samsung Galaxy S24 Ultra Backside.jpg](https://commons.wikimedia.org/wiki/File:Samsung_Galaxy_S24_Ultra_Backside.jpg) |
+| `galaxy-s24-ultra-titanium-black.jpg` | [File:Back view of Samsung Galaxy S24 Ultra Black.jpg](https://commons.wikimedia.org/wiki/File:Back_view_of_Samsung_Galaxy_S24_Ultra_Black.jpg) |
+| `oneplus-13-midnight-black.jpg` | [File:OnePlus 13 back.jpg](https://commons.wikimedia.org/wiki/File:OnePlus_13_back.jpg) |

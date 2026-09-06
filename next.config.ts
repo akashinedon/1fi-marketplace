@@ -1,14 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  images: {
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "placehold.co",
-      },
-    ],
-  },
+  /* Product images are served locally from /public/products, so no
+   * remotePatterns are needed for next/image. */
 };
 
 export default nextConfig;
