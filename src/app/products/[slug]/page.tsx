@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { ProductDetailView } from "@/components/ProductDetailView";
-import { getProductBySlug } from "@/server/products";
+import { fetchProductBySlug } from "@/lib/api";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -9,7 +9,7 @@ type Props = {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  const product = await getProductBySlug(slug);
+  const product = await fetchProductBySlug(slug);
   return {
     title: product ? `${product.name} — 1Fi Marketplace` : "Product not found",
   };
@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function ProductPage({ params }: Props) {
   const { slug } = await params;
-  const product = await getProductBySlug(slug);
+  const product = await fetchProductBySlug(slug);
 
   if (!product) {
     notFound();

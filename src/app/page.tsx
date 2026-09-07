@@ -1,11 +1,11 @@
 import { ProductCard } from "@/components/ProductCard";
-import { getAllProducts } from "@/server/products";
+import { fetchProducts } from "@/lib/api";
 
-// Always hit the database — this is a live catalog, not static content.
+// Always hit the API — this is a live catalog, not static content.
 export const dynamic = "force-dynamic";
 
 export default async function Home() {
-  const products = await getAllProducts();
+  const products = await fetchProducts();
 
   return (
     <div className="mx-auto max-w-5xl px-6 py-10">
